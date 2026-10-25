@@ -9,18 +9,6 @@ export const testimonialFields = `
   rating,
   person,
   position,
-  company,
-  "photo": {
-    "url": photo.asset->url,
-    "alt": photo.alt
-  },
-  "project": project->{
-    _id,
-    title,
-    "slug": slug.current,
-    category
-  },
-  featured,
   displayOrder
 `
 
@@ -33,7 +21,7 @@ export const ALL_TESTIMONIALS_QUERY = groq`
 
 // 2. Get featured testimonials only (e.g., for homepage slider/carousel)
 export const FEATURED_TESTIMONIALS_QUERY = groq`
-  *[_type == "testimonial" && featured == true] | order(displayOrder asc) [0...$limit] {
+  *[_type == "testimonial"] | order(displayOrder asc) [0...$limit] {
     ${testimonialFields}
   }
 `

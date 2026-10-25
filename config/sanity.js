@@ -1,10 +1,13 @@
-import 'dotenv/config'
+import dotenv from 'dotenv'
+dotenv.config()
+ 
 
 
 
-const SANITY_PROJECT_ID='uvvrx6we'
-const SANITY_DATASET='production'
-const SANITY_API_VERSION='2026-01-01'
+const SANITY_PROJECT_ID= process.env.SANITY_PROJECT_ID
+const SANITY_DATASET= process.env.SANITY_DATASET
+const SANITY_API_VERSION= process.env.SANITY_API_VERSION
+
 
 
 
