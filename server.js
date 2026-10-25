@@ -7,7 +7,7 @@ import testimonial from "./routes/testimonialRoutes.js"
 
 const app = express()
 
-const PORT = process.env.PORT || 5600
+const PORT = process.env.PORT || 5000
 
 //allow request from frontend
 app.use(cors());
